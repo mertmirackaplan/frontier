@@ -30,17 +30,6 @@ Typical loop:
 
 ---
 
-## Screenshots / video
-
-| Media | Link |
-|-------|------|
-| Trailer / gameplay | *[placeholder — add BuiltByBit / YouTube link]* |
-| Expedition HUD | *[placeholder]* |
-| Merchant GUI | *[placeholder]* |
-| Path vote screen | *[placeholder]* |
-
----
-
 ## Purchase & install
 
 1. Purchase FRONTIER on **BuiltByBit**: *[purchase link placeholder]*
@@ -73,31 +62,6 @@ Party example (permission `frontier.party`, max size 4, invitee must be online, 
 
 ---
 
-## Documentation (this repo)
-
-| Doc | Description |
-|-----|-------------|
-| [Getting started](docs/getting-started.md) | First run after purchase |
-| [Architecture](docs/architecture.md) | High-level product overview |
-| [Configuration](docs/configuration.md) | Config file roles (buyer-facing) |
-| [Expedition format](docs/expedition-format.md) | Educational YAML shape |
-| [Commands](docs/commands.md) | Public command list |
-| [Permissions](docs/permissions.md) | Permission nodes |
-| [FAQ](docs/faq.md) | Common questions |
-
-Educational examples live under [`examples/`](examples/). Conceptual API stubs live under [`api/examples/`](api/examples/).
-
----
-
-## API / integrations
-
-This repository includes **examples only** — conceptual Java stubs and notes for server owners and addon authors who already own FRONTIER.
-
-- They are **not** a published stable SDK and **not** a copy of the commercial API surface.
-- They are insufficient to rebuild the product.
-- See [`api/examples/README.md`](api/examples/README.md) and [`examples/integrations/README.md`](examples/integrations/README.md).
-
----
 
 ## Issues & support
 
