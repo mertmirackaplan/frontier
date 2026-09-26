@@ -1,52 +1,32 @@
-FRONTIER — Documentation & Examples License
-===========================================
+FRONTIER Documentation & Examples License
 
-Copyright (c) 2026 FRONTIER / Mert Kaplan. All Rights Reserved.
+Copyright (c) 2026 Mert Kaplan
+All rights reserved.
 
-1. Commercial product
---------------------
-FRONTIER is commercial proprietary software distributed via BuiltByBit (and
-authorized channels). The production plugin JAR, proprietary engine, template
-worlds, balancing data, and internal source code are NOT licensed under any
-open-source license and may NOT be redistributed, reverse engineered for the
-purpose of creating a competing product, or published in whole or in part.
+This repository contains documentation, examples, and integration resources
+for the commercial FRONTIER Minecraft plugin.
 
-2. This public repository
--------------------------
-This repository contains documentation, educational YAML examples, and
-conceptual integration stubs only. It is NOT the FRONTIER product and is NOT
-an open-source release of FRONTIER.
+You may:
 
-Subject to the restrictions below, you may:
+- Read and share links to this repository.
+- Adapt the example files for your own learning and integration work.
+- Use the examples with a properly licensed copy of FRONTIER.
 
-  a) Read and share links to this documentation;
-  b) Adapt the educational examples for personal learning;
-  c) Use the conceptual stubs as a starting point for integrations that run
-     against a legally purchased / licensed copy of FRONTIER on your server.
+You may not:
 
-3. Restrictions
----------------
-You may NOT:
+- Redistribute the commercial FRONTIER plugin JAR or paid product files.
+- Present this repository as an open-source release of the FRONTIER plugin.
+- Use the FRONTIER name or branding to imply an official binary, fork, or clone.
+- Remove copyright or license notices from these files.
+- Publish private credentials, server data, or security-sensitive information.
 
-  a) Redistribute the FRONTIER commercial JAR, demo worlds, or proprietary
-     configs shipped with the paid product;
-  b) Claim this repository (or forks of it) is "open-source FRONTIER";
-  c) Remove copyright, trademark, or commercial-boundary notices;
-  d) Use the FRONTIER name or branding in a way that implies endorsement of an
-     unofficial binary or clone;
-  e) Publish secrets, exploit details, or private vulnerability information.
+The FRONTIER production plugin, proprietary source code, and commercial content
+are distributed separately and remain proprietary.
 
-4. No warranty
---------------
-THE MATERIALS IN THIS REPOSITORY ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-ANY KIND, EXPRESS OR IMPLIED. THE AUTHORS ARE NOT LIABLE FOR ANY DAMAGES
-ARISING FROM USE OF THESE MATERIALS OR THE COMMERCIAL PRODUCT.
+THE MATERIALS IN THIS REPOSITORY ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHORS
+SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM
+THE USE OF THESE MATERIALS.
 
-5. Trademarks
--------------
-FRONTIER and related marks are reserved. No trademark license is granted
-except the limited right to refer to FRONTIER when describing integrations
-with the licensed commercial product.
-
-For purchase and commercial licensing, use the BuiltByBit listing (or other
-authorized storefront) provided by the seller.
+For commercial licensing and the production plugin, use the official FRONTIER
+storefront on BuiltByBit.
