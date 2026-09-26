@@ -1,44 +1,46 @@
 # Getting started
 
-This guide assumes you purchased FRONTIER and received the commercial package from BuiltByBit.
+This guide assumes you have purchased FRONTIER.
 
 ## Requirements
 
-- Paper **26.2** (or API-compatible fork on the same line)
-- **Java 25** for the Minecraft server process
-- Optional: Vault + an economy plugin (currency rewards only)
+- Paper 26.2
+- Java 25
+- Optional: Vault + an economy plugin for currency rewards
 
-## Install (summary)
+## Install
 
-1. Stop the server if it is running.
-2. Copy `FRONTIER-1.0.0.jar` into `<server>/plugins/`.
+1. Stop the server.
+2. Copy `FRONTIER-1.0.0.jar` into `plugins/`.
 3. Start Paper with Java 25.
-4. On first enable, configs appear under `plugins/FRONTIER/`.
-5. If demo auto-install is enabled in config, the demo expedition template installs on first enable.
+4. FRONTIER generates its configuration under `plugins/FRONTIER/`.
+5. If demo installation is enabled, the included Sunken Mines demo is installed automatically.
 
-Prefer a **full server restart**. Do not rely on Bukkit `/reload` or PlugMan soft-reload with FRONTIER.
+Use a full server restart rather than Bukkit `/reload` or PlugMan.
 
-## First expedition
+## Start an expedition
 
-```
+Solo:
+
+```text
 /frontier expedition list
 /frontier expedition start <expedition_id>
 ```
 
-Party (permission `frontier.party`, max **4**, invitee online, leader starts):
+Party:
 
-```
+```text
 /frontier party invite PlayerB
 /frontier party accept
 /frontier expedition start <expedition_id>
 ```
+
+The party limit is 4 players, the invitee must be online, and only the leader can start the expedition.
 
 ## Next steps
 
 - [Commands](commands.md)
 - [Permissions](permissions.md)
 - [Configuration](configuration.md)
-- [Expedition format](expedition-format.md) (educational examples)
+- [Expedition format](expedition-format.md)
 - [FAQ](faq.md)
-
-Commercial package extras (`INSTALL.md`, `KNOWN_LIMITATIONS.md`, checksums) ship with the paid download — they are not duplicated as binaries in this public repository.
