@@ -1,41 +1,24 @@
-# Expedition format (educational)
+# Expedition format
 
-> **Educational only.** The YAML below illustrates a plausible public-facing shape for teaching rooms and links. Field names and nesting may differ slightly from your installed commercial defaults. Always treat your generated `plugins/FRONTIER/*.yml` as authoritative.
+An expedition is a graph of rooms connected by player choices.
 
-## Mental model
+## Room types
 
-An expedition is a **directed graph of rooms**:
+| Type | Purpose |
+|------|---------|
+| `START` | Expedition entrance |
+| `COMBAT` | Combat encounter |
+| `TREASURE` | Loot-focused room |
+| `EVENT` | Event or mystery content |
+| `MERCHANT` | Mid-run trades |
+| `ELITE` | Harder combat |
+| `BOSS` | Final encounter |
+| `EXIT` | Extraction |
 
-- One or more **entrance** rooms
-- Mid rooms: combat, treasure, event, merchant, elite, …
-- **Boss** and **extraction** rooms
-- Edges describe path choices (often shown with risk/reward labels to voters)
+## Example
 
-## Room kinds (conceptual)
+See [examples/expeditions/example_expedition.yml](../examples/expeditions/example_expedition.yml) for a small fictional example.
 
-| Kind | Role |
-|------|------|
-| `entrance` | Spawn / intro |
-| `combat` | Fight encounter |
-| `treasure` | Loot-focused |
-| `event` | Narrative / mystery outcome |
-| `merchant` | Mid-run trades |
-| `elite` | Harder combat |
-| `boss` | Capstone fight |
-| `extraction` | Extract / descend decision point |
+Encounter definitions are shown in [examples/encounters/example_encounters.yml](../examples/encounters/example_encounters.yml).
 
-## Minimal fictional sketch
-
-See the full fictional sample:
-
-[`examples/expeditions/example_expedition.yml`](../examples/expeditions/example_expedition.yml)
-
-Encounters referenced by rooms:
-
-[`examples/encounters/example_encounters.yml`](../examples/encounters/example_encounters.yml)
-
-## What not to publish
-
-- Production balancing tables from the paid demo
-- Real player UUIDs, IPs, or economy credentials
-- Proprietary engine internals disguised as “config docs”
+The examples explain the configuration model. Your installed FRONTIER configuration is the source of truth for the exact fields supported by your release.
