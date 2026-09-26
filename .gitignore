@@ -1,0 +1,38 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Java
+*.class
+
+# Minecraft / server data
+server/
+world/
+world_nether/
+world_the_end/
+plugins/
+run/
+
+# Runtime data
+*.db
+*.sqlite
+*.log
+
+# Binaries
+*.jar
+
+# Local environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
