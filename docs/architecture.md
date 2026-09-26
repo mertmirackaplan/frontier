@@ -1,43 +1,42 @@
-# Architecture (high-level overview)
+# Architecture
 
-This document describes FRONTIER at a **product** level for operators and integrators. It intentionally omits implementation recipes for the proprietary engine, session recovery internals, world-copy machinery, anti-exploit systems, reward pipelines, and related commercial IP.
+FRONTIER is built around a simple expedition lifecycle: a configured expedition becomes a temporary run, players move through a room graph, and the run ends with extraction or failure.
 
 ## Core loop
 
-```
+```text
 Expedition template
         │
         ▼
    Temporary run
         │
-        ├── Rooms (graph of authored spaces)
-        │      ├── Encounters (combat / treasure / event / …)
-        │      ├── Path votes (risk vs reward tradeoffs)
-        │      └── Merchant / boss / extraction nodes
+        ├── Rooms
+        │    ├── Encounters
+        │    ├── Path choices
+        │    └── Merchant / Boss / Extraction
         │
-        ├── Extract  → keep loot at current multiplier → cleanup run
-        └── Descend  → deeper / higher multiplier → continue
+        ├── Extract  → secure current rewards → cleanup
+        └── Descend  → increase risk/reward → continue
 ```
 
-## Concepts
+## Core concepts
 
-| Concept | Plain-language meaning |
-|---------|------------------------|
-| **Expedition** | An authored template (YAML + template world) players can start |
-| **Run** | One playthrough: temporary world instance for that session |
-| **Room** | A node in the expedition graph (combat, treasure, event, merchant, boss, extraction, …) |
-| **Encounter** | Content attached to rooms (mobs, loot tables, events, merchant offers) |
-| **Party** | Up to 4 players; leader starts; members vote on paths / extract-descend |
-| **Extract** | End the run and keep rewards at the current loot multiplier |
-| **Descend** | Accept more risk for a higher multiplier and continue deeper |
-| **Merchant** | Mid-run trade GUI (heal, buff, cleanse, supplies, scrap trade) |
+| Concept | Meaning |
+|---------|---------|
+| **Expedition** | A configured expedition players can start |
+| **Run** | One active playthrough of an expedition |
+| **Room** | A node in the expedition graph |
+| **Encounter** | Gameplay attached to a room, such as combat or treasure |
+| **Party** | A group of up to 4 players sharing a run |
+| **Extract** | End the run and secure rewards at the current multiplier |
+| **Descend** | Continue deeper for a higher multiplier |
+| **Merchant** | A mid-run set of useful trades |
+| **Modifier** | A rule that changes the risk or rewards of a run |
 
-## Boundaries (what this doc does not provide)
+## Content model
 
-- How temporary worlds are copied, isolated, or deleted internally
-- Session persistence / restart recovery algorithms
-- Anti-exploit / GUI hardening implementation
-- Exact reward calculation or boss AI internals
-- Package names or class designs from the commercial codebase
+Expedition content is configured as a graph of rooms. Rooms reference encounters and define the choices available to players.
 
-For educational config shape, see [expedition-format.md](expedition-format.md) and [`examples/`](../examples/).
+The public examples show the configuration model without exposing the implementation of the commercial engine.
+
+See [expedition-format.md](expedition-format.md) and [examples/](../examples/).
