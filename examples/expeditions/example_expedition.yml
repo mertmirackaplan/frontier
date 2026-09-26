@@ -1,0 +1,106 @@
+# =============================================================================
+# EXAMPLE ONLY — fictional expedition for learning YAML shape
+# Not production balancing. Not the commercial Sunken Mines (or any paid demo).
+# Field names may differ slightly from your installed FRONTIER defaults.
+# =============================================================================
+
+expeditions:
+  example_crystal_caverns:
+    display-name: "<gradient:#7FDBFF:#B10DC9>Crystal Caverns</gradient>"
+    description: "An educational sample expedition graph."
+    # Template world name is illustrative — do not assume it ships with FRONTIER
+    template-world: frontier_example_crystal_caverns
+    max-party-size: 4
+    starting-room: entrance_hall
+
+    rooms:
+      entrance_hall:
+        type: entrance
+        title: "Cavern Mouth"
+        encounter: intro_echoes
+        exits:
+          - target: mossy_tunnel
+            label: "Follow the moss"
+            risk: low
+            reward: guaranteed
+          - target: dark_rift
+            label: "Enter the rift"
+            risk: high
+            reward: unknown
+
+      mossy_tunnel:
+        type: combat
+        title: "Mossy Tunnel"
+        encounter: skirmish_cave_crawlers
+        exits:
+          - target: glitter_cache
+            label: "Toward glittering light"
+            risk: medium
+            reward: guaranteed
+          - target: whisper_chamber
+            label: "Toward whispers"
+            risk: medium
+            reward: unknown
+
+      dark_rift:
+        type: elite
+        title: "Dark Rift"
+        encounter: elite_rift_guardian
+        exits:
+          - target: whisper_chamber
+            label: "Climb the ledge"
+            risk: high
+            reward: guaranteed
+
+      glitter_cache:
+        type: treasure
+        title: "Glitter Cache"
+        encounter: loot_crystal_hoard
+        exits:
+          - target: traveling_trader
+            label: "Meet the trader"
+            risk: low
+            reward: none
+
+      whisper_chamber:
+        type: event
+        title: "Whisper Chamber"
+        encounter: event_echo_choice
+        exits:
+          - target: traveling_trader
+            label: "Leave the chamber"
+            risk: low
+            reward: none
+
+      traveling_trader:
+        type: merchant
+        title: "Traveling Trader"
+        encounter: merchant_cavern_wares
+        exits:
+          - target: crystal_heart
+            label: "Descend to the heart"
+            risk: high
+            reward: high
+          - target: extraction_ledge
+            label: "Climb toward daylight"
+            risk: low
+            reward: extract
+
+      crystal_heart:
+        type: boss
+        title: "Crystal Heart"
+        encounter: boss_prism_warden
+        exits:
+          - target: extraction_ledge
+            label: "Escape with the prize"
+            risk: medium
+            reward: extract
+
+      extraction_ledge:
+        type: extraction
+        title: "Extraction Ledge"
+        # Players may Extract (keep loot at current multiplier) or Descend
+        # (raise multiplier / danger) depending on product config & room rules.
+        extract-enabled: true
+        descend-enabled: true
+        descend-target: dark_rift

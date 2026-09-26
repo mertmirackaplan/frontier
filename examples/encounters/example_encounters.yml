@@ -1,0 +1,123 @@
+# =============================================================================
+# EXAMPLE ONLY — fictional encounters for learning YAML shape
+# Generic placeholders. Not production reward tables or anti-exploit logic.
+# =============================================================================
+
+encounters:
+  intro_echoes:
+    type: event
+    message: "<gray>Soft crystal chimes welcome you.</gray>"
+    rewards: []
+
+  skirmish_cave_crawlers:
+    type: combat
+    mobs:
+      - type: SPIDER
+        count: 4
+      - type: CAVE_SPIDER
+        count: 2
+    rewards:
+      - pool: common_scrap
+        rolls: 1
+
+  elite_rift_guardian:
+    type: combat
+    mobs:
+      - type: ENDERMAN
+        count: 1
+        named: "Rift Guardian"
+    rewards:
+      - pool: uncommon_loot
+        rolls: 1
+
+  loot_crystal_hoard:
+    type: treasure
+    rewards:
+      - pool: crystal_cache
+        rolls: 2
+
+  event_echo_choice:
+    type: event
+    message: "<italic><dark_purple>The walls remember every footsteps...</dark_purple></italic>"
+    outcomes:
+      - id: listen
+        label: "Listen"
+        effect: minor_buff
+      - id: shout
+        label: "Shout"
+        effect: attract_attention
+    rewards:
+      - pool: event_trinkets
+        rolls: 1
+
+  merchant_cavern_wares:
+    type: merchant
+    offers:
+      - id: heal_vial
+        label: "Heal Vial"
+        cost-scrap: 8
+        effect: heal
+      - id: crystal_ward
+        label: "Crystal Ward"
+        cost-scrap: 12
+        effect: temporary_buff
+      - id: cleanse_dust
+        label: "Cleanse Dust"
+        cost-scrap: 10
+        effect: cleanse
+      - id: rope_kit
+        label: "Rope Kit"
+        cost-scrap: 6
+        effect: supplies
+      - id: scrap_trade
+        label: "Trade Scrap"
+        cost-items: [COBBLESTONE, 32]
+        effect: scrap_trade
+
+  boss_prism_warden:
+    type: boss
+    mobs:
+      - type: IRON_GOLEM
+        count: 1
+        named: "Prism Warden"
+    rewards:
+      - pool: boss_prism
+        rolls: 1
+
+reward-pools:
+  common_scrap:
+    - item: IRON_NUGGET
+      amount: 4
+      weight: 10
+    - item: COAL
+      amount: 8
+      weight: 8
+
+  uncommon_loot:
+    - item: IRON_INGOT
+      amount: 3
+      weight: 6
+    - item: GOLD_INGOT
+      amount: 1
+      weight: 3
+
+  crystal_cache:
+    - item: AMETHYST_SHARD
+      amount: 6
+      weight: 10
+    - item: DIAMOND
+      amount: 1
+      weight: 1
+
+  event_trinkets:
+    - item: GLOW_INK_SAC
+      amount: 2
+      weight: 5
+
+  boss_prism:
+    - item: DIAMOND
+      amount: 3
+      weight: 5
+    - item: NETHERITE_SCRAP
+      amount: 1
+      weight: 1

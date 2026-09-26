@@ -1,0 +1,52 @@
+FRONTIER — Documentation & Examples License
+===========================================
+
+Copyright (c) 2026 FRONTIER / Mert Kaplan. All Rights Reserved.
+
+1. Commercial product
+--------------------
+FRONTIER is commercial proprietary software distributed via BuiltByBit (and
+authorized channels). The production plugin JAR, proprietary engine, template
+worlds, balancing data, and internal source code are NOT licensed under any
+open-source license and may NOT be redistributed, reverse engineered for the
+purpose of creating a competing product, or published in whole or in part.
+
+2. This public repository
+-------------------------
+This repository contains documentation, educational YAML examples, and
+conceptual integration stubs only. It is NOT the FRONTIER product and is NOT
+an open-source release of FRONTIER.
+
+Subject to the restrictions below, you may:
+
+  a) Read and share links to this documentation;
+  b) Adapt the educational examples for personal learning;
+  c) Use the conceptual stubs as a starting point for integrations that run
+     against a legally purchased / licensed copy of FRONTIER on your server.
+
+3. Restrictions
+---------------
+You may NOT:
+
+  a) Redistribute the FRONTIER commercial JAR, demo worlds, or proprietary
+     configs shipped with the paid product;
+  b) Claim this repository (or forks of it) is "open-source FRONTIER";
+  c) Remove copyright, trademark, or commercial-boundary notices;
+  d) Use the FRONTIER name or branding in a way that implies endorsement of an
+     unofficial binary or clone;
+  e) Publish secrets, exploit details, or private vulnerability information.
+
+4. No warranty
+--------------
+THE MATERIALS IN THIS REPOSITORY ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED. THE AUTHORS ARE NOT LIABLE FOR ANY DAMAGES
+ARISING FROM USE OF THESE MATERIALS OR THE COMMERCIAL PRODUCT.
+
+5. Trademarks
+-------------
+FRONTIER and related marks are reserved. No trademark license is granted
+except the limited right to refer to FRONTIER when describing integrations
+with the licensed commercial product.
+
+For purchase and commercial licensing, use the BuiltByBit listing (or other
+authorized storefront) provided by the seller.
