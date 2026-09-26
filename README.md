@@ -1,88 +1,128 @@
 # FRONTIER
 
-**FRONTIER is a premium replayable expedition system for Minecraft Survival servers.**
+**Replayable expeditions for Minecraft Survival.**
 
-| | |
-|---|---|
-| Version | `1.0.0` |
-| Paper | **26.2** |
-| Java | **25** |
-| Distribution | Commercial (BuiltByBit) |
-| This repository | Documentation, examples, and integration resources |
+FRONTIER adds a new gameplay loop to Survival servers: players enter expeditions, explore branching rooms, fight encounters, collect loot, and decide how far they want to push their run.
 
-> **Commercial software.** The production FRONTIER plugin is proprietary and sold via BuiltByBit.  
-> **This public repository is not the product.** It publishes buyer-facing documentation, educational YAML examples, and conceptual integration stubs only. It does **not** contain the production engine, JAR, or proprietary implementation.
+|              |            |
+| ------------ | ---------- |
+| Version      | `1.0.0`    |
+| Paper        | `26.2`     |
+| Java         | `25`       |
+| Distribution | Commercial |
 
----
+> FRONTIER is a commercial plugin available on BuiltByBit.
+> This repository contains documentation, examples, and integration resources for server owners and developers.
 
-## What FRONTIER does
+## How it works
 
-FRONTIER runs **authored expedition templates** (rooms, encounters, and rewards configured in YAML) as temporary run worlds. Players explore branching rooms, fight, loot, vote on paths, and choose to **Extract** (keep loot) or **Descend** (raise the multiplier and the danger).
+A typical expedition looks like this:
 
-Typical loop:
-
-1. Start solo or as a party (max **4**).
-2. Explore rooms: combat, treasure, event/mystery, merchant, elite, boss, extraction.
-3. Vote on paths — tradeoffs show risk vs reward.
-4. At key rooms: **Extract** at the current loot multiplier, or **Descend** for higher risk/reward.
-5. By default, death ends the run and unfinished rewards are lost.
-6. On extract, rewards are delivered and the temporary run world is cleaned up safely.
-
----
-
-## Purchase & install
-
-1. Purchase FRONTIER on **BuiltByBit**: *[purchase link placeholder]*
-2. Download `FRONTIER-1.0.0.jar` from your BuiltByBit library.
-3. Place the JAR in your Paper server’s `plugins/` folder.
-4. Start Paper with **Java 25**.
-5. On first enable, configs generate under `plugins/FRONTIER/` and the demo expedition can auto-install (when enabled in config).
-
-Full install notes ship with the commercial package (`INSTALL.md`). Prefer a **full server restart** over Bukkit `/reload` or PlugMan soft-reload.
-
-### Quick start (after install)
-
+```text
+Enter
+  ↓
+Explore
+  ↓
+Choose your path
+  ↓
+Fight / Loot / Discover
+  ↓
+Take the risk
+  ↓
+Extract or Descend
+  ↓
+Boss
+  ↓
+Rewards
 ```
+
+Players can run expeditions solo or with a party of up to 4 players.
+
+Available room types include:
+
+* Combat
+* Treasure
+* Events
+* Mystery
+* Merchant
+* Elite encounters
+* Bosses
+* Extraction
+
+### The core mechanic
+
+The deeper you go, the higher the reward multiplier.
+
+At any point, the party can choose to **Extract** and secure the current rewards, or **Descend** and push the run further.
+
+Go deeper for better rewards — but a failed run can cost you everything you collected.
+
+## Quick start
+
+After installing FRONTIER:
+
+```text
 /frontier expedition list
 /frontier expedition start <expedition_id>
 ```
 
-Party example (permission `frontier.party`, max size 4, invitee must be online, only the leader starts):
+For parties:
 
-```
-# Player A (leader)
+```text
+Player A:
 /frontier party invite PlayerB
 
-# Player B (online)
+Player B:
 /frontier party accept
 
-# Player A (leader)
+Player A:
 /frontier expedition start <expedition_id>
 ```
 
----
+The party limit is 4 players and only the leader can start an expedition.
 
+## Installation
 
-## Issues & support
+1. Purchase FRONTIER from BuiltByBit.
+2. Download `FRONTIER-1.0.0.jar`.
+3. Put the JAR into your Paper server's `plugins/` folder.
+4. Start the server with Java 25.
+5. FRONTIER generates its configuration automatically on first startup.
 
-- **Bug reports / feature discussion:** use [GitHub Issues](../../issues) with the templates in `.github/ISSUE_TEMPLATE/`.
-- **Security:** see [SECURITY.md](SECURITY.md) — report privately; do not disclose exploits publicly.
-- **Purchase / license support:** BuiltByBit resource page / seller messaging *[placeholder]*.
+The included demo expedition can be installed automatically from the plugin configuration.
 
-Please do **not** open issues asking for production source, JARs, or circumvention of the commercial license.
+For detailed setup instructions, see [`INSTALL.md`](INSTALL.md).
 
----
+## Documentation
 
-## License & commercial boundary
+* [Installation](INSTALL.md)
+* [Commands](docs/COMMANDS.md)
+* [Permissions](docs/PERMISSIONS.md)
+* [Configuration](docs/configuration.md)
+* [Expedition Format](docs/expedition-format.md)
+* [Architecture](docs/architecture.md)
+* [FAQ](docs/faq.md)
 
-See [LICENSE](LICENSE).
+## Development & integrations
 
-- FRONTIER (brand, plugin binary, proprietary engine) — **All Rights Reserved**.
-- Public docs and examples in this repo — limited permission for learning and integration against a **licensed** copy of FRONTIER.
-- Redistribution of the commercial plugin JAR, demo worlds shipped with the product, or proprietary implementation is **not** allowed.
+This repository contains examples for working with FRONTIER from other plugins and for creating custom expedition content.
 
----
+See [`docs/`](docs/) and [`examples/`](examples/) for the available resources.
 
-## Contributing
+The production FRONTIER engine is distributed separately through BuiltByBit.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions here are for documentation, examples, and discussion — not for the proprietary production engine.
+## Support
+
+For bugs and documentation issues, open a GitHub issue.
+
+For purchase and license support, use the BuiltByBit resource page.
+
+For security vulnerabilities, see [`SECURITY.md`](SECURITY.md).
+
+## License
+
+FRONTIER is commercial software.
+
+The production plugin and its proprietary implementation are not open source. The documentation and examples in this repository are provided for reference and integration purposes.
+
+See [`LICENSE`](LICENSE) for details.
