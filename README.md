@@ -96,8 +96,8 @@ For detailed setup instructions, see [`INSTALL.md`](INSTALL.md).
 ## Documentation
 
 * [Installation](INSTALL.md)
-* [Commands](docs/COMMANDS.md)
-* [Permissions](docs/PERMISSIONS.md)
+* [Commands](docs/commands.md)
+* [Permissions](docs/permissions.md)
 * [Configuration](docs/configuration.md)
 * [Expedition Format](docs/expedition-format.md)
 * [Architecture](docs/architecture.md)
