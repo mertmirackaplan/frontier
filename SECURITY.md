@@ -1,4 +1,6 @@
-# Security Policy
+# Security
+
+Security issues in the commercial FRONTIER plugin should be reported privately.
 
 ## Supported versions
 
@@ -6,30 +8,23 @@
 |---------|-----------|
 | 1.0.x   | Yes |
 
-Security fixes for the commercial plugin are delivered through the paid distribution channel (BuiltByBit updates), not as public patches in this repository.
-
 ## Reporting a vulnerability
 
-**Do not** open a public GitHub issue for security vulnerabilities, exploits, or abuse paths.
+Please do not open a public GitHub issue for a security vulnerability.
 
-Please report privately to the seller via:
+Use the private support channel on the [FRONTIER BuiltByBit page](https://builtbybit.com/) and include:
 
-- BuiltByBit resource messaging / support *[placeholder]*
-- Or email: *[security contact placeholder]*
+- FRONTIER version
+- Paper version
+- Java version
+- Clear reproduction steps
+- Expected and actual behavior
+- Impact or affected functionality
 
-Include:
-
-- FRONTIER version and Paper / Java versions
-- Clear reproduction steps (private)
-- Impact assessment (what an attacker could do)
-- Whether the issue is already public elsewhere
+Please avoid posting exploit code or sensitive server information publicly.
 
 ## Disclosure
 
-- We will acknowledge private reports and work on a fix for the commercial package when valid.
-- Please allow time for a patched release before any public discussion.
-- Public exploit disclosure, PoCs, or “how to abuse FRONTIER” posts are not welcome in this repository.
+We will review valid reports and address confirmed issues through the commercial release channel.
 
-## Scope notes
-
-This public repo contains docs and examples only. Finding issues in example YAML/Java stubs is fine via normal issues; production plugin vulnerabilities must follow the private process above.
+For ordinary bugs that are not security-sensitive, use GitHub Issues instead.
